@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .el--1 {
+        background-color: blueviolet;
+        order: 2;
+      }
+      .el--2 {
+        background-color: orangered;
+        order: 2;
+      }
+      .el--3 {
+        background-color: green;
+
+        height: 150px; /* bumabase sa ang value ng isang grid at pwede maapektuhan lahat ng parent at child pag ito ay maliit o malaki */
+        order: 1; /*ito ay pag pwepwesto sa mga items*/
+      }
+      .el--4 {
+        background-color: goldenrod;
+        order: 4;
+      }
+      .el--5 {
+        background-color: palevioletred;
+      }
+      .el--6 {
+        background-color: steelblue;
+        order: -1;
+        flex-basis: 400px;
+
+        /* align-self: stretch; */
+      }
+      .el--7 {
+        background-color: yellow;
+        align-self: center;
+        order: 3;
+      }
+      .el--8 {
+        background-color: crimson;
+        /* align-self: stretch; pang pakapal ng width */
+        order: -1;
+      }
+      .el {
+        text-align: center;
+        flex: 1;
+        /* defaults
+        flex-grow: 0; --->flex:0; same
+        flex-basis: auto; para sa width
+        flex-shrink: 1;  para sa loob ng container o lumagpas pa ayun sa value ng width items
+        for shortcut
+        flex: grow, basis, shirnk.
+        
+        */
+      }
+
+      .container {
+        /* STARTER */
+        font-family: sans-serif;
+        background-color: #ddd;
+        font-size: 40px;
+        margin: 40px;
+        width: 1200px;
+        min-height: 500px;
+
+        /* FLEXBOX */
+        gap: 0; /*gumawa ng space sa mga item-grids*/
+        display: flex;
+        align-items: center; /*<--gitna sa gilid ng container -> flex-start, flex-end at stretch <---vertical*/
+        justify-content: center; /*<--gitna sa pagitan ng bawat sulok ng container-->space-around, space-between, at space-evenlyt<--horizontal*/
+      }
+    </style>
+  </head>
+  <nav>
+    <!-- <strong>This is the navigation</strong> -->
+    <a href="blog.html">Blog</a>
+    <a href="#">Challenges</a>
+    <a href="flexbox.html">Flexbox</a>
+    <a href="css-grid.html">CSS Grid</a>
+  </nav>
+  <body>
+    <div class="container">
+      <div class="el el--1">HTML</div>
+      <div class="el el--2">and</div>
+      <div class="el el--3">CSS</div>
+      <div class="el el--4">are</div>
+      <div class="el el--5">amazing</div>
+      <div class="el el--6">languages</div>
+      <div class="el el--7">to</div>
+      <div class="el el--8">learn</div>
+    </div>
+  </body>
+</html>
